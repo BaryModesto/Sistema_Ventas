@@ -117,29 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icons8-tienda-801" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Imagenes Iconos\icons8-tienda-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-tienda-802" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Imagenes Iconos\icons8-tienda-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-tienda-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Imagenes Iconos\icons8-tienda-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-tienda-en-línea-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>icons8-tienda-en-línea-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-tienda-en-línea-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>icons8-tienda-en-línea-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-tienda-803" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>icons8-tienda-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-tienda-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Imagenes Iconos\icons8-tienda-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-tienda-en-línea-1001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Imagenes Iconos\icons8-tienda-en-línea-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
   </data>
 </root>
