@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.menu = new System.Windows.Forms.MenuStrip();
+            this.menu_titulo = new System.Windows.Forms.MenuStrip();
+            this.label1 = new System.Windows.Forms.Label();
+            this.contenedor = new System.Windows.Forms.Panel();
             this.menu_usuario = new FontAwesome.Sharp.IconMenuItem();
             this.menu_mantenedor = new FontAwesome.Sharp.IconMenuItem();
             this.menu_ventas = new FontAwesome.Sharp.IconMenuItem();
@@ -37,9 +40,6 @@
             this.menu_proveedores = new FontAwesome.Sharp.IconMenuItem();
             this.menu_reportes = new FontAwesome.Sharp.IconMenuItem();
             this.menu_acercade = new FontAwesome.Sharp.IconMenuItem();
-            this.menu_titulo = new System.Windows.Forms.MenuStrip();
-            this.label1 = new System.Windows.Forms.Label();
-            this.contenedor = new System.Windows.Forms.Panel();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,39 @@
             this.menu.Size = new System.Drawing.Size(1098, 64);
             this.menu.TabIndex = 0;
             this.menu.Text = "menuStrip1";
+            // 
+            // menu_titulo
+            // 
+            this.menu_titulo.AutoSize = false;
+            this.menu_titulo.BackColor = System.Drawing.Color.SteelBlue;
+            this.menu_titulo.Location = new System.Drawing.Point(0, 0);
+            this.menu_titulo.Name = "menu_titulo";
+            this.menu_titulo.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menu_titulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.menu_titulo.Size = new System.Drawing.Size(1098, 66);
+            this.menu_titulo.TabIndex = 1;
+            this.menu_titulo.Text = "menuStrip2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.SteelBlue;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(14, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(208, 23);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Sistema de Ventas";
+            // 
+            // contenedor
+            // 
+            this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contenedor.Location = new System.Drawing.Point(0, 130);
+            this.contenedor.Name = "contenedor";
+            this.contenedor.Size = new System.Drawing.Size(1098, 401);
+            this.contenedor.TabIndex = 3;
             // 
             // menu_usuario
             // 
@@ -173,39 +206,6 @@
             this.menu_acercade.Size = new System.Drawing.Size(70, 60);
             this.menu_acercade.Text = "Acerca de";
             this.menu_acercade.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // menu_titulo
-            // 
-            this.menu_titulo.AutoSize = false;
-            this.menu_titulo.BackColor = System.Drawing.Color.SteelBlue;
-            this.menu_titulo.Location = new System.Drawing.Point(0, 0);
-            this.menu_titulo.Name = "menu_titulo";
-            this.menu_titulo.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menu_titulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menu_titulo.Size = new System.Drawing.Size(1098, 66);
-            this.menu_titulo.TabIndex = 1;
-            this.menu_titulo.Text = "menuStrip2";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.SteelBlue;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(14, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Sistema de Ventas";
-            // 
-            // contenedor
-            // 
-            this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenedor.Location = new System.Drawing.Point(0, 130);
-            this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(1098, 401);
-            this.contenedor.TabIndex = 3;
             // 
             // Inicio
             // 

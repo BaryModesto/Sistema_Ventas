@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.edit_documentacion = new System.Windows.Forms.TextBox();
+            this.edit_contrasenha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.boton_ingresar = new System.Windows.Forms.Button();
             this.boton_cancelar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,29 +62,20 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Sistema de Venta";
             // 
-            // pictureBox1
+            // edit_documentacion
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.SteelBlue;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(47, 50);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(101, 99);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.edit_documentacion.Location = new System.Drawing.Point(254, 50);
+            this.edit_documentacion.Name = "edit_documentacion";
+            this.edit_documentacion.Size = new System.Drawing.Size(224, 20);
+            this.edit_documentacion.TabIndex = 3;
             // 
-            // textBox1
+            // edit_contrasenha
             // 
-            this.textBox1.Location = new System.Drawing.Point(254, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(224, 20);
-            this.textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(254, 105);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(224, 20);
-            this.textBox2.TabIndex = 4;
+            this.edit_contrasenha.Location = new System.Drawing.Point(254, 105);
+            this.edit_contrasenha.Name = "edit_contrasenha";
+            this.edit_contrasenha.PasswordChar = '*';
+            this.edit_contrasenha.Size = new System.Drawing.Size(224, 20);
+            this.edit_contrasenha.TabIndex = 4;
             // 
             // label3
             // 
@@ -116,6 +107,7 @@
             this.boton_ingresar.TabIndex = 7;
             this.boton_ingresar.Text = "Ingresar";
             this.boton_ingresar.UseVisualStyleBackColor = false;
+            this.boton_ingresar.Click += new System.EventHandler(this.boton_ingresar_Click);
             // 
             // boton_cancelar
             // 
@@ -127,6 +119,17 @@
             this.boton_cancelar.TabIndex = 8;
             this.boton_cancelar.Text = "Cancelar";
             this.boton_cancelar.UseVisualStyleBackColor = false;
+            this.boton_cancelar.Click += new System.EventHandler(this.boton_cancelar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.SteelBlue;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(47, 50);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(101, 99);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // Login
             // 
@@ -137,8 +140,8 @@
             this.Controls.Add(this.boton_ingresar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.edit_contrasenha);
+            this.Controls.Add(this.edit_documentacion);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -158,8 +161,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox edit_documentacion;
+        private System.Windows.Forms.TextBox edit_contrasenha;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button boton_ingresar;

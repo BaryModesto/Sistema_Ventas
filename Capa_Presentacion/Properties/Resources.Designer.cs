@@ -63,9 +63,19 @@ namespace Capa_Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_tienda_en_línea_50 {
+        internal static System.Drawing.Bitmap icons8_tienda_803 {
             get {
-                object obj = ResourceManager.GetObject("icons8-tienda-en-línea-50", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-tienda-803", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_tienda_en_línea_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_tienda_en_línea_100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

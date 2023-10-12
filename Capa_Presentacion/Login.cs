@@ -21,5 +21,25 @@ namespace Capa_Presentacion
         {
 
         }
+
+        private void boton_cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void boton_ingresar_Click(object sender, EventArgs e)
+        {
+            Inicio ventana_inicio = new Inicio();
+            ventana_inicio.Show();
+            this.Hide();
+            //---
+            ventana_inicio.FormClosing += Cerrando;
+        }
+        private void Cerrando(object sender, FormClosingEventArgs e)   
+        {
+            edit_contrasenha.Clear();
+            edit_documentacion.Clear();
+            this.Show();
+        }
     }
 }
