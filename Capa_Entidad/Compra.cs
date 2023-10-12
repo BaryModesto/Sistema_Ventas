@@ -14,6 +14,7 @@ namespace Capa_Entidad
         public string tipo_documento { set; get; }
         public string numero_documento { set; get; }
         public decimal monto_total {  set; get; }
+        public List<Detalle_Compra> obj_detalle_c { set; get; }
         public string fecha_registro { set; get; }
         
     }

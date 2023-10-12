@@ -14,6 +14,7 @@ namespace Capa_Entidad
         public decimal precio_venta { set; get; }
         public int cantidad { set; get; }
         public decimal sub_total { set; get; }
+        public List<Detalle_Venta> obj_detalle_v { set; get; }
         public string fecha_registro { set; get; }
     }
 }
