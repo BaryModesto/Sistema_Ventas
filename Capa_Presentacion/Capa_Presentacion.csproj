@@ -116,5 +116,11 @@
   <ItemGroup>
     <None Include="Properties\Imagenes Iconos\icons8-tienda-en-línea-100.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa_Entidad\Capa_Entidad.csproj">
+      <Project>{57cca5b6-ca21-45f4-9176-b39d66ee0b6e}</Project>
+      <Name>Capa_Entidad</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
