@@ -32,7 +32,7 @@ namespace Capa_Presentacion
         private void boton_ingresar_Click(object sender, EventArgs e) 
         {
 
-            List<Usuario> test = new CN_Usuarios().Listar();
+            //List<Usuario> test = new CN_Usuarios().Listar();
 
             Usuario usuario = new CN_Usuarios().Listar().Where(u => u.documento == edit_documentacion.Text && u.clave == edit_contrasenha.Text ).FirstOrDefault();
 

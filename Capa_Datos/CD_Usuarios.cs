@@ -20,13 +20,13 @@ namespace Capa_Datos
             {
                 try
                 {
-                    string codigo_sql_select = "select id_usuario,documento,nombre_completo,correo,clave,estado from usuario";
+                    string codigo_sql_select = "select id_usuario,doumento,nombre_completo,correo,clave,estado from usuario";
                     SqlCommand comando = new SqlCommand(codigo_sql_select, conex);
                     comando.CommandType = CommandType.Text;
                     comando.Connection.Open();
                     SqlDataReader lectura = comando.ExecuteReader();
-                    
-                    while (lectura.Read())
+                    //bool ver = lectura.Read();
+                    while (/*ver == true */ lectura.Read())
                     {
                         /*
                         Usuario temp = new Usuario();
@@ -43,7 +43,7 @@ namespace Capa_Datos
                             new Usuario()
                             {
                                 id_usuario = Convert.ToInt32(lectura["id_usuario"]),
-                                documento = lectura["documento"].ToString(),
+                                documento = lectura["doumento"].ToString(),
                                 nombre_completo = lectura["nombre_completo"].ToString(),
                                 correo = lectura["correo"].ToString(),
                                 clave = lectura["clave"].ToString(),
@@ -51,6 +51,7 @@ namespace Capa_Datos
                             }
 
                         );
+                        //ver = lectura.Read();
                     }
                 }
                 catch (Exception ex)
