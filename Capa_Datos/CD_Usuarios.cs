@@ -55,8 +55,7 @@ namespace Capa_Datos
                 }
                 catch (Exception ex)
                 {
-                    lista = new List<Usuario>();
-                    throw;
+                    lista = new List<Usuario>();                    
                 }
             }
             return lista;
