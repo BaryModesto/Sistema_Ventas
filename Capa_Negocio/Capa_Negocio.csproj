@@ -45,6 +45,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Capa_Datos\Capa_Datos.csproj">
+      <Project>{b1b1a71f-935c-402e-979b-e99f176f12d9}</Project>
+      <Name>Capa_Datos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Capa_Entidad\Capa_Entidad.csproj">
       <Project>{57cca5b6-ca21-45f4-9176-b39d66ee0b6e}</Project>
       <Name>Capa_Entidad</Name>
