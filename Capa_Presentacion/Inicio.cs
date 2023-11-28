@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Capa_Entidad;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace Capa_Presentacion
 {
     public partial class Inicio : Form
     {
-        public Inicio()
+        private static Usuario usuario_actual ;
+        public Inicio(Usuario _usuario)
         {
+            usuario_actual = _usuario;
             InitializeComponent();
+        }
+
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+            label_user_logeado.Text = usuario_actual.nombre_completo;
         }
     }
 }

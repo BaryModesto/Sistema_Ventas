@@ -38,11 +38,11 @@ namespace Capa_Presentacion
 
             if (usuario != null)
             {
-                Inicio ventana_inicio = new Inicio();
+                Inicio ventana_inicio = new Inicio(usuario);
                 ventana_inicio.Show();
                 this.Hide();
                 //---
-                ventana_inicio.FormClosing += Cerrando;
+                ventana_inicio.FormClosing += Cerrando;                
             }
             else
             {
