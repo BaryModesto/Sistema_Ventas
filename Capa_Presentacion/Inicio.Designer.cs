@@ -169,6 +169,7 @@
             this.menu_clientes.Size = new System.Drawing.Size(60, 60);
             this.menu_clientes.Text = "Clientes";
             this.menu_clientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menu_clientes.Click += new System.EventHandler(this.menu_clientes_Click);
             // 
             // menu_proveedores
             // 
@@ -183,6 +184,7 @@
             this.menu_proveedores.Size = new System.Drawing.Size(70, 60);
             this.menu_proveedores.Text = "Proveedores";
             this.menu_proveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menu_proveedores.Click += new System.EventHandler(this.menu_proveedores_Click);
             // 
             // menu_reportes
             // 
@@ -197,6 +199,7 @@
             this.menu_reportes.Size = new System.Drawing.Size(70, 60);
             this.menu_reportes.Text = "Reportes";
             this.menu_reportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menu_reportes.Click += new System.EventHandler(this.menu_reportes_Click);
             // 
             // menu_acercade
             // 
@@ -286,12 +289,14 @@
             this.submenu_registrar_compra.Name = "submenu_registrar_compra";
             this.submenu_registrar_compra.Size = new System.Drawing.Size(180, 22);
             this.submenu_registrar_compra.Text = "Registrar";
+            this.submenu_registrar_compra.Click += new System.EventHandler(this.submenu_registrar_compra_Click);
             // 
             // submenu_verDetalle_compra
             // 
             this.submenu_verDetalle_compra.Name = "submenu_verDetalle_compra";
             this.submenu_verDetalle_compra.Size = new System.Drawing.Size(180, 22);
             this.submenu_verDetalle_compra.Text = "Ver Detalle";
+            this.submenu_verDetalle_compra.Click += new System.EventHandler(this.submenu_verDetalle_compra_Click);
             // 
             // Inicio
             // 

@@ -72,6 +72,12 @@
     <Compile Include="Form_Compras.Designer.cs">
       <DependentUpon>Form_Compras.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Compras_Detalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Compras_Detalles.Designer.cs">
+      <DependentUpon>Form_Compras_Detalles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Proveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
     </Compile>
     <Compile Include="Form_Usuarios.Designer.cs">
       <DependentUpon>Form_Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Ventas_Detalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Ventas_Detalles.Designer.cs">
+      <DependentUpon>Form_Ventas_Detalles.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
