@@ -23,5 +23,15 @@ namespace Capa_Presentacion
         {
             label_user_logeado.Text = usuario_actual.nombre_completo;
         }
+        private void Abrir_Formulario(Form _form)
+        {
+            this.Hide();
+            _form.Show();
+        }
+        private void menu_usuario_Click(object sender, EventArgs e)
+        {
+            Abrir_Formulario(new Form_Usuarios());
+        }
+        
     }
 }

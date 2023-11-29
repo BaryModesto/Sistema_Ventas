@@ -79,6 +79,7 @@
             this.menu_usuario.Size = new System.Drawing.Size(60, 60);
             this.menu_usuario.Text = "Usuarios";
             this.menu_usuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menu_usuario.Click += new System.EventHandler(this.menu_usuario_Click);
             // 
             // menu_mantenedor
             // 
