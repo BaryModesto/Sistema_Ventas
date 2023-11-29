@@ -42,7 +42,7 @@ namespace Capa_Presentacion
                 ventana_inicio.Show();
                 this.Hide();
                 //---
-                ventana_inicio.FormClosing += Cerrando;                
+                ventana_inicio.FormClosing += Cerrando;
             }
             else
             {
