@@ -1,6 +1,6 @@
 ﻿namespace Capa_Presentacion
 {
-    partial class Producto_Form
+    partial class Form_Clientes
     {
         /// <summary>
         /// Required designer variable.
@@ -35,20 +35,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(113, 138);
+            this.label1.Location = new System.Drawing.Point(111, 116);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(275, 31);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Soy form de Producto";
+            this.label1.Size = new System.Drawing.Size(265, 31);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Soy form de Clientes";
             // 
-            // Producto_Form
+            // Form_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 368);
+            this.ClientSize = new System.Drawing.Size(571, 335);
             this.Controls.Add(this.label1);
-            this.Name = "Producto_Form";
-            this.Text = "Producto_Form";
+            this.Name = "Form_Clientes";
+            this.Text = "Form_Clientes";
             this.ResumeLayout(false);
             this.PerformLayout();
 
