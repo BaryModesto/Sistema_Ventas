@@ -19,7 +19,6 @@ namespace Capa_Presentacion
             usuario_actual = _usuario;
             InitializeComponent();
         }
-
         private void Inicio_Load(object sender, EventArgs e)
         {
             label_user_logeado.Text = usuario_actual.nombre_completo;

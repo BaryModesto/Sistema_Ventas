@@ -42,6 +42,8 @@
             this.contenedor = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label_user_logeado = new System.Windows.Forms.Label();
+            this.iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
+            this.iconMenuItem2 = new FontAwesome.Sharp.IconMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,6 +83,9 @@
             // menu_mantenedor
             // 
             this.menu_mantenedor.AutoSize = false;
+            this.menu_mantenedor.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iconMenuItem1,
+            this.iconMenuItem2});
             this.menu_mantenedor.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.menu_mantenedor.IconChar = FontAwesome.Sharp.IconChar.Tools;
             this.menu_mantenedor.IconColor = System.Drawing.Color.Black;
@@ -88,7 +93,7 @@
             this.menu_mantenedor.IconSize = 50;
             this.menu_mantenedor.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menu_mantenedor.Name = "menu_mantenedor";
-            this.menu_mantenedor.Size = new System.Drawing.Size(70, 60);
+            this.menu_mantenedor.Size = new System.Drawing.Size(122, 60);
             this.menu_mantenedor.Text = "Mantenedor";
             this.menu_mantenedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -231,6 +236,24 @@
             this.label_user_logeado.TabIndex = 5;
             this.label_user_logeado.Text = "Usuario Logeado";
             // 
+            // iconMenuItem1
+            // 
+            this.iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconMenuItem1.IconColor = System.Drawing.Color.Black;
+            this.iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconMenuItem1.Name = "iconMenuItem1";
+            this.iconMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.iconMenuItem1.Text = "Categoria";
+            // 
+            // iconMenuItem2
+            // 
+            this.iconMenuItem2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconMenuItem2.IconColor = System.Drawing.Color.Black;
+            this.iconMenuItem2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconMenuItem2.Name = "iconMenuItem2";
+            this.iconMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.iconMenuItem2.Text = "Producto";
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -271,6 +294,8 @@
         private System.Windows.Forms.Panel contenedor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label_user_logeado;
+        private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
+        private FontAwesome.Sharp.IconMenuItem iconMenuItem2;
     }
 }
 
