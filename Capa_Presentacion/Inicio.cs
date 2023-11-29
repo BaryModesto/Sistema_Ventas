@@ -51,6 +51,25 @@ namespace Capa_Presentacion
         {
             Abrir_Formulario( (IconMenuItem)sender, new Form_Usuarios());
         }
-        
+
+        private void submenu_categoria_Click(object sender, EventArgs e)
+        {
+            Abrir_Formulario(menu_mantenedor, new Form_Categoria());
+        }
+
+        private void submenu_producto_Click(object sender, EventArgs e)
+        {
+            Abrir_Formulario(menu_mantenedor, new Form_Producto());
+        }
+
+        private void submenu_registrar_venta_Click(object sender, EventArgs e)
+        {
+            Abrir_Formulario(menu_ventas, new Form_Venta());
+        }
+
+        private void submenu_verDetalle_venta_Click(object sender, EventArgs e)
+        {
+            Abrir_Formulario(menu_ventas, new Form_Venta());
+        }
     }
 }
