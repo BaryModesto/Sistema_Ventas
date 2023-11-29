@@ -1,4 +1,5 @@
 ﻿using Capa_Entidad;
+using Capa_Negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +25,17 @@ namespace Capa_Presentacion
         }
         private void Inicio_Load(object sender, EventArgs e)
         {
+            List<Permiso> lista_permisos = new CN_Permisos().Listar(usuario_actual.id_usuario);
+            foreach (IconMenuItem icon_menu in menu.Items)
+            {
+                bool encontrada = lista_permisos.Any(m => m.nombre_menu == icon_menu.Name);
+                if (!encontrada)
+                {
+                    icon_menu.Visible = false;
+                }
+                
+            }
+
             label_user_logeado.Text = usuario_actual.nombre_completo;
         }
         private void Abrir_Formulario(IconMenuItem _menu,Form _form)
