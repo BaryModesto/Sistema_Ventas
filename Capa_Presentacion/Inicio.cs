@@ -18,9 +18,21 @@ namespace Capa_Presentacion
         private static Usuario usuario_actual ;
         private static IconMenuItem menu_activo = null;
         private static Form formulario_activo = null;
-        public Inicio(Usuario _usuario)
+        public Inicio(Usuario _usuario = null)
         {
-            usuario_actual = _usuario;
+            if (_usuario == null)
+            {
+                usuario_actual = new Usuario()
+                {
+                    nombre_completo = "Admin predefinido",
+                    id_usuario = 1
+                };
+            }
+            else
+            {
+                    usuario_actual = _usuario;
+            }
+            //usuario_actual = _usuario;
             InitializeComponent();
         }
         private void Inicio_Load(object sender, EventArgs e)
