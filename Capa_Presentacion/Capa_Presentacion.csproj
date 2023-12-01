@@ -128,6 +128,7 @@
     <Compile Include="Form_Venta.Designer.cs">
       <DependentUpon>Form_Venta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilidades\Opcion_Combo.cs" />
     <EmbeddedResource Include="Form_Categoria.resx">
       <DependentUpon>Form_Categoria.cs</DependentUpon>
     </EmbeddedResource>

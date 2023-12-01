@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Capa_Presentacion.Utilidades;
 
 namespace Capa_Presentacion
 {
@@ -17,6 +18,28 @@ namespace Capa_Presentacion
             InitializeComponent();
         }
 
-       
+        private void Form_Usuarios_Load(object sender, EventArgs e)
+        {
+            cb_estado.Items.Clear();
+            cb_estado.Items.Add
+            (
+                new Opcion_Combo()
+                {
+                    valor =1,
+                    texto = "Activo"
+                }
+            );
+            cb_estado.Items.Add
+            (
+                new Opcion_Combo()
+                {
+                    valor = 0,
+                    texto = "No Activo"
+                }
+            );
+            cb_estado.DisplayMember = "texto";
+            cb_estado.ValueMember = "valor";
+            cb_estado.SelectedIndex = 0;
+        }
     }
 }
