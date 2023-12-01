@@ -120,5 +120,10 @@ namespace Capa_Presentacion
         {
             Abrir_Formulario((IconMenuItem)sender, new Form_Reportes());
         }
+
+        private void Inicio_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

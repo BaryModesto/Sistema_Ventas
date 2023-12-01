@@ -34,7 +34,11 @@
             this.submenu_categoria = new FontAwesome.Sharp.IconMenuItem();
             this.submenu_producto = new FontAwesome.Sharp.IconMenuItem();
             this.menu_ventas = new FontAwesome.Sharp.IconMenuItem();
+            this.submenu_registrar_venta = new System.Windows.Forms.ToolStripMenuItem();
+            this.submenu_verDetalle_venta = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_compras = new FontAwesome.Sharp.IconMenuItem();
+            this.submenu_registrar_compra = new System.Windows.Forms.ToolStripMenuItem();
+            this.submenu_verDetalle_compra = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_clientes = new FontAwesome.Sharp.IconMenuItem();
             this.menu_proveedores = new FontAwesome.Sharp.IconMenuItem();
             this.menu_reportes = new FontAwesome.Sharp.IconMenuItem();
@@ -44,10 +48,6 @@
             this.contenedor = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label_user_logeado = new System.Windows.Forms.Label();
-            this.submenu_registrar_venta = new System.Windows.Forms.ToolStripMenuItem();
-            this.submenu_verDetalle_venta = new System.Windows.Forms.ToolStripMenuItem();
-            this.submenu_registrar_compra = new System.Windows.Forms.ToolStripMenuItem();
-            this.submenu_verDetalle_compra = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,6 +139,20 @@
             this.menu_ventas.Text = "Ventas";
             this.menu_ventas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // submenu_registrar_venta
+            // 
+            this.submenu_registrar_venta.Name = "submenu_registrar_venta";
+            this.submenu_registrar_venta.Size = new System.Drawing.Size(129, 22);
+            this.submenu_registrar_venta.Text = "Registrar";
+            this.submenu_registrar_venta.Click += new System.EventHandler(this.submenu_registrar_venta_Click);
+            // 
+            // submenu_verDetalle_venta
+            // 
+            this.submenu_verDetalle_venta.Name = "submenu_verDetalle_venta";
+            this.submenu_verDetalle_venta.Size = new System.Drawing.Size(129, 22);
+            this.submenu_verDetalle_venta.Text = "Ver Detalle";
+            this.submenu_verDetalle_venta.Click += new System.EventHandler(this.submenu_verDetalle_venta_Click);
+            // 
             // menu_compras
             // 
             this.menu_compras.AutoSize = false;
@@ -155,6 +169,20 @@
             this.menu_compras.Size = new System.Drawing.Size(55, 60);
             this.menu_compras.Text = "Compras";
             this.menu_compras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // submenu_registrar_compra
+            // 
+            this.submenu_registrar_compra.Name = "submenu_registrar_compra";
+            this.submenu_registrar_compra.Size = new System.Drawing.Size(180, 22);
+            this.submenu_registrar_compra.Text = "Registrar";
+            this.submenu_registrar_compra.Click += new System.EventHandler(this.submenu_registrar_compra_Click);
+            // 
+            // submenu_verDetalle_compra
+            // 
+            this.submenu_verDetalle_compra.Name = "submenu_verDetalle_compra";
+            this.submenu_verDetalle_compra.Size = new System.Drawing.Size(180, 22);
+            this.submenu_verDetalle_compra.Text = "Ver Detalle";
+            this.submenu_verDetalle_compra.Click += new System.EventHandler(this.submenu_verDetalle_compra_Click);
             // 
             // menu_clientes
             // 
@@ -270,34 +298,6 @@
             this.label_user_logeado.TabIndex = 5;
             this.label_user_logeado.Text = "Usuario Logeado";
             // 
-            // submenu_registrar_venta
-            // 
-            this.submenu_registrar_venta.Name = "submenu_registrar_venta";
-            this.submenu_registrar_venta.Size = new System.Drawing.Size(180, 22);
-            this.submenu_registrar_venta.Text = "Registrar";
-            this.submenu_registrar_venta.Click += new System.EventHandler(this.submenu_registrar_venta_Click);
-            // 
-            // submenu_verDetalle_venta
-            // 
-            this.submenu_verDetalle_venta.Name = "submenu_verDetalle_venta";
-            this.submenu_verDetalle_venta.Size = new System.Drawing.Size(180, 22);
-            this.submenu_verDetalle_venta.Text = "Ver Detalle";
-            this.submenu_verDetalle_venta.Click += new System.EventHandler(this.submenu_verDetalle_venta_Click);
-            // 
-            // submenu_registrar_compra
-            // 
-            this.submenu_registrar_compra.Name = "submenu_registrar_compra";
-            this.submenu_registrar_compra.Size = new System.Drawing.Size(180, 22);
-            this.submenu_registrar_compra.Text = "Registrar";
-            this.submenu_registrar_compra.Click += new System.EventHandler(this.submenu_registrar_compra_Click);
-            // 
-            // submenu_verDetalle_compra
-            // 
-            this.submenu_verDetalle_compra.Name = "submenu_verDetalle_compra";
-            this.submenu_verDetalle_compra.Size = new System.Drawing.Size(180, 22);
-            this.submenu_verDetalle_compra.Text = "Ver Detalle";
-            this.submenu_verDetalle_compra.Click += new System.EventHandler(this.submenu_verDetalle_compra_Click);
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -314,6 +314,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Inicio";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Inicio_FormClosed);
             this.Load += new System.EventHandler(this.Inicio_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();

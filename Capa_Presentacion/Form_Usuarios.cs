@@ -16,5 +16,7 @@ namespace Capa_Presentacion
         {
             InitializeComponent();
         }
+
+       
     }
 }
