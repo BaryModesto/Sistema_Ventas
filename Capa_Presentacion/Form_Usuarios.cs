@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Capa_Presentacion.Utilidades;
+using Capa_Negocio;
+using Capa_Entidad;
 
 namespace Capa_Presentacion
 {
@@ -40,6 +42,21 @@ namespace Capa_Presentacion
             cb_estado.DisplayMember = "texto";
             cb_estado.ValueMember = "valor";
             cb_estado.SelectedIndex = 0;
+            //---
+            List<Rol> lista_rol = new CN_Rol().Listar();
+            foreach (var item in lista_rol)
+            {
+                cb_rol.Items.Add(
+                      new Opcion_Combo()
+                      {
+                          valor = item.id_rol,
+                          texto = item.descripcion
+                      }
+               );
+            }
+            cb_rol.DisplayMember = "texto";
+            cb_rol.ValueMember = "valor";
+            cb_rol.SelectedIndex = 0;
         }
     }
 }
