@@ -67,6 +67,18 @@ namespace Capa_Presentacion
                 ((Opcion_Combo)cb_estado.SelectedItem).valor.ToString(),
                 ((Opcion_Combo)cb_estado.SelectedItem).texto.ToString()
             });
+            Limpiar();
+        }
+        private void Limpiar()
+        {
+            edit_id.Clear();
+            edit_documento.Clear();
+            edit_nombre_completo.Clear();
+            edit_correo.Clear();
+            edit_clave.Clear();
+            edit_confirmar_clave.Clear();
+            cb_rol.SelectedIndex = 0;
+            cb_estado.SelectedIndex = 0;
         }
     }
 }
