@@ -58,5 +58,15 @@ namespace Capa_Presentacion
             cb_rol.ValueMember = "valor";
             cb_rol.SelectedIndex = 0;
         }
+
+        private void boton_guardar_Click(object sender, EventArgs e)
+        {
+            dgv_data.Rows.Add(new object[] {"",edit_id.Text,edit_documento.Text,edit_nombre_completo.Text,edit_correo.Text,edit_clave.Text,
+                ((Opcion_Combo)cb_rol.SelectedItem).valor.ToString(),
+                ((Opcion_Combo)cb_rol.SelectedItem).texto.ToString(),
+                ((Opcion_Combo)cb_estado.SelectedItem).valor.ToString(),
+                ((Opcion_Combo)cb_estado.SelectedItem).texto.ToString()
+            });
+        }
     }
 }

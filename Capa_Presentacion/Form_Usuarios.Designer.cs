@@ -49,7 +49,9 @@
             this.boton_editar = new System.Windows.Forms.Button();
             this.boton_eliminar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_data = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.edit_id = new System.Windows.Forms.TextBox();
             this.btn_seleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.id_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,11 +60,9 @@
             this.clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado_valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label10 = new System.Windows.Forms.Label();
-            this.edit_id = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_data)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -214,6 +214,7 @@
             this.boton_guardar.TabIndex = 22;
             this.boton_guardar.Text = "Guardar";
             this.boton_guardar.UseVisualStyleBackColor = false;
+            this.boton_guardar.Click += new System.EventHandler(this.boton_guardar_Click);
             // 
             // boton_editar
             // 
@@ -254,9 +255,9 @@
             this.label9.TabIndex = 25;
             this.label9.Text = "Detalle Usuario";
             // 
-            // dataGridView1
+            // dgv_data
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
+            this.dgv_data.AllowUserToAddRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -265,9 +266,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btn_seleccionar,
             this.id_usuario,
             this.documento,
@@ -276,18 +277,37 @@
             this.clave,
             this.id_rol,
             this.rol,
-            this.estado,
-            this.estado_valor});
-            this.dataGridView1.Location = new System.Drawing.Point(189, 69);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
+            this.estado_valor,
+            this.estado});
+            this.dgv_data.Location = new System.Drawing.Point(189, 69);
+            this.dgv_data.MultiSelect = false;
+            this.dgv_data.Name = "dgv_data";
+            this.dgv_data.ReadOnly = true;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(733, 414);
-            this.dataGridView1.TabIndex = 26;
+            this.dgv_data.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_data.RowTemplate.Height = 28;
+            this.dgv_data.Size = new System.Drawing.Size(733, 414);
+            this.dgv_data.TabIndex = 26;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(189, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(733, 47);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Lista de Usuarios:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // edit_id
+            // 
+            this.edit_id.Location = new System.Drawing.Point(129, 37);
+            this.edit_id.Name = "edit_id";
+            this.edit_id.Size = new System.Drawing.Size(22, 20);
+            this.edit_id.TabIndex = 28;
+            this.edit_id.Text = "0";
             // 
             // btn_seleccionar
             // 
@@ -345,12 +365,6 @@
             this.rol.Name = "rol";
             this.rol.ReadOnly = true;
             // 
-            // estado
-            // 
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            // 
             // estado_valor
             // 
             this.estado_valor.HeaderText = "Estado Valor";
@@ -358,24 +372,11 @@
             this.estado_valor.ReadOnly = true;
             this.estado_valor.Visible = false;
             // 
-            // label10
+            // estado
             // 
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(189, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(733, 47);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "Lista de Usuarios:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // edit_id
-            // 
-            this.edit_id.Location = new System.Drawing.Point(129, 37);
-            this.edit_id.Name = "edit_id";
-            this.edit_id.Size = new System.Drawing.Size(22, 20);
-            this.edit_id.TabIndex = 28;
-            this.edit_id.Text = "0";
+            this.estado.HeaderText = "Estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
             // 
             // Form_Usuarios
             // 
@@ -384,7 +385,7 @@
             this.ClientSize = new System.Drawing.Size(939, 495);
             this.Controls.Add(this.edit_id);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_data);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.boton_eliminar);
             this.Controls.Add(this.boton_editar);
@@ -407,7 +408,7 @@
             this.Name = "Form_Usuarios";
             this.Text = "Form_Usuarios";
             this.Load += new System.EventHandler(this.Form_Usuarios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_data)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -434,7 +435,7 @@
         private System.Windows.Forms.Button boton_editar;
         private System.Windows.Forms.Button boton_eliminar;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_data;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox edit_id;
         private System.Windows.Forms.DataGridViewButtonColumn btn_seleccionar;
@@ -445,7 +446,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clave;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_rol;
         private System.Windows.Forms.DataGridViewTextBoxColumn rol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado_valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
     }
 }
